@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "87b9c43c-4e8c-47ef-9355-98c03b346f1d",
+		"name": "Lern-Micro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24281615"
+	},
+	"item": [
+		{
+			"name": "Get Department By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9001/departments/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departmentName\": \"IT-2\",\r\n    \"departmentAddress\": \"DT610, DienAn, Quang Nam\",\r\n    \"departmentCode\": \"IT-007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/departments/"
+			},
+			"response": []
+		},
+		{
+			"name": "get Users and Department",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"TRONG\",\r\n  \"lastName\": \"LE\",\r\n  \"email\": \"letrong191120@gmail.com\",\r\n  \"departmentId\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "API_GATE-WAY & Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9191/users/1"
+			},
+			"response": []
+		}
+	]
+}
