@@ -18,4 +18,10 @@ public class FallBackMethodController {
                 " Please try again later";
     }
 
+    @GetMapping("/emailServiceFallBack")
+    public String emailServiceFallBackMethod() {
+        return "Email Service is taking longer than Expected." +
+                " Please try again later";
+    }
+
 }
