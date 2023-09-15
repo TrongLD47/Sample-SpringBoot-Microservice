@@ -24,4 +24,10 @@ public class FallBackMethodController {
                 " Please try again later";
     }
 
+    @GetMapping("/grpcServiceFallBack")
+    public String grpcServiceFallBackMethod() {
+        return "gRPC Service is taking longer than Expected." +
+                " Please try again later";
+    }
+
 }

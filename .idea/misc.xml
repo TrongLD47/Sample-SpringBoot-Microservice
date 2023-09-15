@@ -10,6 +10,10 @@
         <option value="$PROJECT_DIR$/cloud-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/email-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gRPC-service/pom.xml" />
+        <option value="$PROJECT_DIR$/proto/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
