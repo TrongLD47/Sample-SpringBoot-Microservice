@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/department-service/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-config-server/pom.xml" />
-        <option value="$PROJECT_DIR$/service-registry/pom.xml" />
-        <option value="$PROJECT_DIR$/cloud-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/hystrix-dashboard/pom.xml" />
-        <option value="$PROJECT_DIR$/email-service/pom.xml" />
-        <option value="$PROJECT_DIR$/gRPC-service/pom.xml" />
-        <option value="$PROJECT_DIR$/proto/pom.xml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
