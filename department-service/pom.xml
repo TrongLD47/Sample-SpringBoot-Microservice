@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<groupId>com.dailycodebuffer</groupId>
-		<artifactId>SpringBoot-Microservice</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.15</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+<!--	<parent>  using this parent for parent pom.xml file config  -->
+<!--		<groupId>com.dailycodebuffer</groupId>-->
+<!--		<artifactId>SpringBoot-Microservice</artifactId>-->
+<!--		<version>0.0.1-SNAPSHOT</version>-->
+<!--	</parent>-->
+	<groupId>com.dailycodebuffer</groupId>
 	<artifactId>department-service</artifactId>
-	<version>${parent.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>department-service</name>
 	<description>department-service</description>
+	<properties>
+		<java.version>11</java.version>
+		<spring-cloud.version>2021.0.8</spring-cloud.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<mapstruct-version>1.5.5.Final</mapstruct-version>
+		<maven.test.skip>true</maven.test.skip>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<starter-zipkin.version>2.2.8.RELEASE</starter-zipkin.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,7 +59,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
-			<version>2.2.8.RELEASE</version>
+			<version>${starter-zipkin.version}</version>
 		</dependency>
 
 		<dependency>
@@ -93,6 +110,17 @@
 		</dependency>
 
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
