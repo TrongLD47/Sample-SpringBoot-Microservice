@@ -13,6 +13,9 @@
         <option value="$PROJECT_DIR$/proto/pom.xml" />
         <option value="$PROJECT_DIR$/service-registry/pom.xml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sm-customer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sm-customer-service/customer-grpc/pom.xml" />
+        <option value="$PROJECT_DIR$/sm-customer-service/customer-service/pom.xml" />
       </list>
     </option>
   </component>

@@ -57,6 +57,7 @@ public enum ErrorCodeMap {
     FAILURE_CALCULATE_DISTANCE(53),
     PRODUCT_NOT_SALE_ONLINE_MODE(54),
     FAILURE_NULL_IPAY_PAID_SAVE(55),
+    INTERNAL_ERROR(56),
     ;
     private final int value;
 

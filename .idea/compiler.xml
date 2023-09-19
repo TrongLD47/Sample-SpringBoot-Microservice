@@ -8,14 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-config-server" />
-        <module name="common" />
         <module name="grpc-service" />
         <module name="department-service" />
+        <module name="customer-service" />
+        <module name="user-service" />
+        <module name="cloud-gateway" />
+        <module name="common" />
         <module name="email-service" />
         <module name="hystrix-dashboard" />
         <module name="proto" />
-        <module name="user-service" />
-        <module name="cloud-gateway" />
+        <module name="customer-grpc" />
         <module name="service-registry" />
       </profile>
     </annotationProcessing>
@@ -23,12 +25,16 @@
       <module name="cloud-config-server" target="11" />
       <module name="cloud-gateway" target="11" />
       <module name="common" target="11" />
+      <module name="customer-grpc" target="11" />
+      <module name="customer-service" target="11" />
+      <module name="demo" target="17" />
       <module name="department-service" target="11" />
       <module name="email-service" target="11" />
       <module name="grpc-service" target="11" />
       <module name="hystrix-dashboard" target="11" />
       <module name="proto" target="11" />
       <module name="service-registry" target="11" />
+      <module name="sm-customer-service" target="11" />
       <module name="user-service" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -37,12 +43,16 @@
       <module name="cloud-config-server" options="-parameters" />
       <module name="cloud-gateway" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="customer-grpc" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="department-service" options="-parameters" />
       <module name="email-service" options="-parameters" />
       <module name="grpc-service" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
       <module name="proto" options="-parameters" />
       <module name="service-registry" options="-parameters" />
+      <module name="sm-customer-service" options="" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
