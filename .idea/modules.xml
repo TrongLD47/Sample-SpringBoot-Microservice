@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/grpc-service/grpc-service.iml" filepath="$PROJECT_DIR$/grpc-service/grpc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" filepath="$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/proto/proto.iml" filepath="$PROJECT_DIR$/proto/proto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scheduler-service/scheduler-service.iml" filepath="$PROJECT_DIR$/scheduler-service/scheduler-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-registry/service-registry.iml" filepath="$PROJECT_DIR$/service-registry/service-registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/sm-customer-service/sm-customer-service.iml" filepath="$PROJECT_DIR$/sm-customer-service/sm-customer-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />

@@ -4,7 +4,10 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang.time.DurationFormatUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.logging.LogFactory;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,12 +16,19 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.commons.logging.Log;
 
 /**
  * Created by son.nguyen on 7/26/2020.
  */
 public class CommonUtils {
+
+    protected static final Log log = LogFactory.getLog(CommonUtils.class);
+    private static final Pattern EMAIL_P = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
+    private static final Pattern ZIP_P = Pattern.compile("\\d{5}(-\\d{4})?");
+    private static final Pattern USERNAME_P = Pattern.compile("^[A-Za-z0-9_-]{3,25}");
     public static void main(String[] args) {
 //        System.out.println(toValidPhoneNumber("+84938789900"));
 //        System.out.println(toValidPhoneNumber("+60103016121"));
@@ -39,6 +49,16 @@ public class CommonUtils {
     private static final Pattern rfc2822 = Pattern.compile(
             "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
     );
+
+    public static boolean isValidUsername(String username) {
+        Matcher m = USERNAME_P.matcher(username);
+        return m.matches();
+    }
+
+    public static boolean isValidZip(String zipFile) {
+        Matcher m = ZIP_P.matcher(zipFile);
+        return m.matches();
+    }
 
     public static Date convertTimeInMilliToDate(Long timeInMilli) {
         return convertUnixTimeToDate(timeInMilli != null ? timeInMilli / 1000 : null, false);
@@ -194,4 +214,23 @@ public class CommonUtils {
 
     public static final String OTP_DIGIT_CHARSET = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     static SimpleDateFormat dMYFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+    public static String getNameWithoutExtension(String fileName) {
+        return fileName.indexOf(".") > 0 ? fileName.substring(0, fileName.lastIndexOf(".")) : fileName;
+    }
+    public static String countDateToCurrentDate(Timestamp time) {
+        Date current = new Date();
+        long diff = current.getTime() - time.getTime();
+        String hrDateText = DurationFormatUtils.formatDuration(diff, "d 'day' H 'hour' ago");
+        return hrDateText;
+    }
+
+    public static boolean isValidImage(String path) {
+        return path.toLowerCase().endsWith(".jpg") || path.toLowerCase().endsWith(".png") || path.toLowerCase().endsWith(".gif") || path.toLowerCase().endsWith(".jpeg");
+    }
+
+    public static String getExtension(String fileName) {
+        return fileName.indexOf(".") < fileName.length() ? fileName.substring(fileName.lastIndexOf(".") + 1) : "";
+    }
+
 }
