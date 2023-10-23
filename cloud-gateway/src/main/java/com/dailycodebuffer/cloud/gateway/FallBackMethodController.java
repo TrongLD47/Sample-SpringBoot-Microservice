@@ -30,4 +30,10 @@ public class FallBackMethodController {
                 " Please try again later";
     }
 
+    @GetMapping("/schedulerServiceFallBack")
+    public String schedulerServiceFallBackMethod() {
+        return "Scheduler Service is taking longer than Expected." +
+                " Please try again later";
+    }
+
 }

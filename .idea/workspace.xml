@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="327b39f6-f66f-41da-acb2-dd0a849236a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scheduler-service/src/main/resources/bootstrap.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduler-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-config-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway/src/main/java/com/dailycodebuffer/cloud/gateway/FallBackMethodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway/src/main/java/com/dailycodebuffer/cloud/gateway/FallBackMethodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/department-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/department-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/department-service/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/department-service/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scheduler-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +74,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "D:/Trong.le-duc_Project/Demo/Sample-SpringBoot-Microservice/common/src/main/java/com/dailycodebuffer/common/util",
+    "last_opened_file_path": "D:/Trong.le-duc_Project/Demo/Sample-SpringBoot-Microservice/user-service/src/main/resources",
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "a747694bb6a7c52b1949b15a98eeef6d"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -70,13 +89,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\user-service\src\main\resources" />
       <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\common\src\main\java\com\dailycodebuffer\common\util" />
       <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\common\src\main\webapp\file\template-export" />
       <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\department-service\src\main\resources" />
       <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\common\src\main\webapp\file.template-export" />
-      <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\common\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\scheduler-service\src\main\resources" />
       <recent name="D:\Trong.le-duc_Project\Demo\Sample-SpringBoot-Microservice\sm-customer-service\customer-grpc\src\main\proto\customer" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -115,23 +135,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerGrpcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="customer-grpc" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.customer.custome.grpc.CustomerGrpcApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="customer-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dailycodebuffer.customer.CustomerServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="demo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,13 +184,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SmCustomerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sm-customer-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.smcustomerservice.SmCustomerServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dailycodebuffer.user.UserServiceApplication" />
@@ -194,10 +193,8 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.SchedulerServiceApplication" />
-      <item itemvalue="Spring Boot.CustomerGrpcApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.CustomerServiceApplication" />
-      <item itemvalue="Spring Boot.DemoApplication" />
-      <item itemvalue="Spring Boot.SmCustomerServiceApplication" />
       <item itemvalue="Spring Boot.ServiceRegistryApplication" />
       <item itemvalue="Spring Boot.CloudConfigServerApplication" />
       <item itemvalue="Spring Boot.CloudGatewayApplication" />
@@ -205,7 +202,6 @@
       <item itemvalue="Spring Boot.DepartmentServiceApplication" />
       <item itemvalue="Spring Boot.EmailServiceApplication" />
       <item itemvalue="Spring Boot.GrpcServiceApplication" />
-      <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -219,7 +215,7 @@
       <workItem from="1695097345740" duration="9695000" />
       <workItem from="1697453267575" duration="576000" />
       <workItem from="1697682328299" duration="21240000" />
-      <workItem from="1697765815875" duration="6141000" />
+      <workItem from="1697765815875" duration="21349000" />
     </task>
     <servers />
   </component>
