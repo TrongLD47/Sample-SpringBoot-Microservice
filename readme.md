@@ -6,3 +6,27 @@
 3. find some api to test as attatchment file "API.json" in project. 
 
 4. for more detail how to build this project u can explore more at:'https://www.youtube.com/watch?v=BnknNTN8icw'
+
+
+* Note: Service and port:
+    + Registry-Service | 8761
+    + Cloud-Config-Service | 8888
+    + GateWay-Service | 9191
+    + Hystrix-Dashboard-Service | 8883
+    + User-Service | 9002
+    + Department-Service | 8001
+    + Email-Service | 9003
+    + Grpc-Service | 9004
+    + GRPC-Port | 9991
+    + Scheduler-Service | 9005
+
+////////////////////////////////////  HOW TO USING DOCKER TO CREATE DATABASE  /////////////////////////////////////////////////////
+1. Create folder to contain DockerFile and .sql file :![img_2.png](img_2.png)
+2. Run cmd : "docker build -t <image_name> ./" ex: 'docker build -t server_config_db:v1 ./'
+![img_3.png](img_3.png)
+3. Run cmd 'docker images -a' show all images to check is existed: ![img_4.png](img_4.png)
+4. Run cmd 'docker run -d --name server_config_db_container -p 7979:5432 server_config_db:v1'
+5. Run cmd 'docler ps -a' and copy CONTAINER ID to start CONTAINER. Run cmd 'docker start <CONTAINER_ID>';
+ex: ![img_5.png](img_5.png) -> 'docker start bb2f38975860'
+6. Now we can using data from 'docker ps -a' to connect database: ![img_6.png](img_6.png)
+7. Run sql to setup database
