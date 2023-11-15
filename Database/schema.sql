@@ -1,4 +1,6 @@
-create table properties
+CREATE SCHEMA IF NOT EXISTS server_config
+SET search_path TO server_config;
+CREATE TABLE properties
 (
     PropertyId  BIGSERIAL PRIMARY KEY,
     Application CHARACTER VARYING(100),
