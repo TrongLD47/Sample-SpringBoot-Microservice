@@ -8,6 +8,8 @@
       <change afterPath="$PROJECT_DIR$/email-service/src/main/java/dailycodebuffer/email/Entity/EmailDetails.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/email-service/src/main/java/dailycodebuffer/email/service/Impl/EmailServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/email-service/src/main/resources/templates/submit_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8254c4d5-6814-4bdc-9e95-91cf64e8dee4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8254c4d5-6814-4bdc-9e95-91cf64e8dee4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/department-service/src/main/java/com/dailycodebuffer/department/entity/DepartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/department-service/src/main/java/com/dailycodebuffer/department/entity/DepartmentEntity.java" afterDir="false" />
@@ -34,6 +36,9 @@
         <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/create-scheduler-service" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -276,5 +281,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
