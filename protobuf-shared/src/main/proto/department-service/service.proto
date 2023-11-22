@@ -1,0 +1,18 @@
+syntax = "proto3";
+package department.service;
+
+option java_multiple_files = true;
+option java_package = "com.dailycodebuffer.department.service";
+option java_outer_classname = "DepartmentServiceAPI";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+import "common/shared.proto";
+import "department-service/shared.proto";
+
+service DepartmentService {
+  rpc createOrUpdateDepartment (PDepartment) returns (google.protobuf.Int64Value);
+  rpc getDepartmentById (google.protobuf.Int64Value) returns (PDepartmentResponse);
+  rpc getDepartments (google.protobuf.Empty) returns (PDepartmentsResponse);
+  rpc deleteDepartmentById (google.protobuf.Int64Value) returns (common.protobuf.EmptyResponse);
+}

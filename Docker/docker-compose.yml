@@ -1,31 +1,56 @@
-version: '3'
+version: "3.9"
 
 services:
-  database:
-    image: 'postgres:latest'
+  # department postgres db
+  postgres-serverConfig-service:
+    container_name: microservices-serverConfig
+    image: postgres:16-alpine
+    restart: unless-stopped
     ports:
-      - 15432:5432
-    env_file:
-      - .env
-    networks:
-      - postgres-network
+      - "5433:5432"
     volumes:
-      - ./db-data/:/var/lib/postgresql/data/
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-  
-  pgadmin:
-    image: dpage/pgadmin4
-    ports:
-      - 15433:80
-    env_file:
-      - .env
-    depends_on:
-      - database
-    networks:
-      - postgres-network
-    volumes:
-      - ./pgadmin-data/:/var/lib/pgadmin/
+      - ./data/db-serverConfig:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=server_config_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
 
-networks: 
-  postgres-network:
-    driver: bridge
+  # department postgres db
+  postgres-department-service:
+    container_name: microservices-department
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./data/db-department:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=database-microservices-department
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+
+  postgres-user-service:
+    container_name: microservices-user
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+      - "5435:5432"
+    volumes:
+      - ./data/db-user:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=database-microservices-user
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+
+  postgres-customer-service:
+    container_name: microservices-customer
+    image: postgres:16-alpine
+    restart: unless-stopped
+    ports:
+      - "5436:5432"
+    volumes:
+      - ./data/db-customer:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=database-microservices-customer
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
