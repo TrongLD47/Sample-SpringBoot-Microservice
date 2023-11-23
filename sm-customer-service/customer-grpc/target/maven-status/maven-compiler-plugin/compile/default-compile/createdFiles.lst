@@ -40,5 +40,6 @@ com\dailycodebuffer\customer\proto\ListCustomerResponse$CustomerOrBuilder.class
 com\dailycodebuffer\customer\proto\CustomerServiceGrpc$2.class
 com\dailycodebuffer\customer\proto\ListCustomerResponse$Data$1.class
 com\dailycodebuffer\customer\proto\CustomerGrpcErrorOrBuilder.class
+com\dailycodebuffer\customer\proto\CustomerServiceGrpc$AsyncService.class
 com\dailycodebuffer\customer\proto\ListCustomerRequest$Builder.class
 com\dailycodebuffer\customer\proto\CustomerGrpcError$Builder.class

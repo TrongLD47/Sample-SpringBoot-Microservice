@@ -35,6 +35,4 @@ build/
 ### Docker ###
 /Docker/data
 
-!**/mvnw.cmd
-!**/mvnw
 !**/*.iml

@@ -31,6 +31,6 @@ public class EmailServiceApplication {
         details.setBody("this is body");
         details.setSubject("This Is Subject01");
         details.setAttachment("D:\\Trong.le-duc_Project\\Demo\\Sample-SpringBoot-Microservice\\Chat box.pdf");
-        emailService.sendMail(details);
+//        emailService.sendMail(details);
     }
 }

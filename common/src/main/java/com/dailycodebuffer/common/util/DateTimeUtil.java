@@ -8,6 +8,8 @@ import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -349,5 +351,10 @@ public class DateTimeUtil {
             logger.info(e.getMessage());
         }
         return false;
+    }
+
+    public static String formatLocalDateTimeNow() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        return LocalDateTime.now().format(formatter);
     }
 }

@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.47.0)",
+    value = "by gRPC proto compiler (version 1.58.0)",
     comments = "Source: customer/customer.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CustomerServiceGrpc {
 
   private CustomerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "customer.CustomerService";
+  public static final java.lang.String SERVICE_NAME = "customer.CustomerService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.dailycodebuffer.customer.proto.ListCustomerRequest,
@@ -92,31 +92,32 @@ public final class CustomerServiceGrpc {
 
   /**
    */
-  public static abstract class CustomerServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void listCustomers(com.dailycodebuffer.customer.proto.ListCustomerRequest request,
+    default void listCustomers(com.dailycodebuffer.customer.proto.ListCustomerRequest request,
         io.grpc.stub.StreamObserver<com.dailycodebuffer.customer.proto.ListCustomerResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCustomersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListCustomersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.dailycodebuffer.customer.proto.ListCustomerRequest,
-                com.dailycodebuffer.customer.proto.ListCustomerResponse>(
-                  this, METHODID_LIST_CUSTOMERS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerService.
    */
-  public static final class CustomerServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerServiceStub> {
+  public static abstract class CustomerServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerService.
+   */
+  public static final class CustomerServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerServiceStub> {
     private CustomerServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -138,8 +139,10 @@ public final class CustomerServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerService.
    */
-  public static final class CustomerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerServiceBlockingStub> {
+  public static final class CustomerServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerServiceBlockingStub> {
     private CustomerServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -160,8 +163,10 @@ public final class CustomerServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerService.
    */
-  public static final class CustomerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerServiceFutureStub> {
+  public static final class CustomerServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerServiceFutureStub> {
     private CustomerServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -189,10 +194,10 @@ public final class CustomerServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -221,6 +226,18 @@ public final class CustomerServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListCustomersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.dailycodebuffer.customer.proto.ListCustomerRequest,
+              com.dailycodebuffer.customer.proto.ListCustomerResponse>(
+                service, METHODID_LIST_CUSTOMERS)))
+        .build();
+  }
+
   private static abstract class CustomerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     CustomerServiceBaseDescriptorSupplier() {}
@@ -244,9 +261,9 @@ public final class CustomerServiceGrpc {
   private static final class CustomerServiceMethodDescriptorSupplier
       extends CustomerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomerServiceMethodDescriptorSupplier(String methodName) {
+    CustomerServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

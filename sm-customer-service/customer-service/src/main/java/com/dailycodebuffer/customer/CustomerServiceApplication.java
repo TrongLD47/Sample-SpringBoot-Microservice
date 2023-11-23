@@ -13,7 +13,6 @@ public class CustomerServiceApplication {
 
     private final CustomerService studentService;
 
-
     public static void main(String[] args) {
         SpringApplication.run(CustomerServiceApplication.class, args);
     }

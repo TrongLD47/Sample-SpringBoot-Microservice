@@ -13,3 +13,7 @@ CREATE TABLE properties
     UpdatedDate TIMESTAMP                       DEFAULT NOW(),
     UNIQUE (Key, Application, Profile)
 );
+
+
+CREATE SCHEMA IF NOT EXISTS userPlatform;
+SET search_path TO userPlatform;
